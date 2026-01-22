@@ -73,9 +73,8 @@
 
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 -mt-16 z-20 pb-12">
         
-        <!-- PAPARAN DASHBOARD -->
+        <!-- DASHBOARD VIEW -->
         <div id="v-dashboard" class="grid grid-cols-1 lg:grid-cols-3 gap-6 no-print">
-            <!-- Maklumat Program -->
             <div class="lg:col-span-2 space-y-6">
                 <div class="glass-card rounded-3xl p-6 md:p-8 border-t-4 border-indigo-500">
                     <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
@@ -110,7 +109,6 @@
                 </button>
             </div>
 
-            <!-- Kad Statistik -->
             <div class="glass-card rounded-3xl p-8 flex flex-col items-center justify-center text-center border-t-4 border-emerald-500">
                 <h3 class="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">Jumlah Kehadiran</h3>
                 <div class="relative">
@@ -127,7 +125,7 @@
             </div>
         </div>
 
-        <!-- PAPARAN PANEL ADMIN -->
+        <!-- PANEL ADMIN -->
         <div id="v-admin" class="hidden space-y-6 no-print">
             <div class="glass-card rounded-3xl p-6 bg-slate-900 text-white flex justify-between items-center shadow-2xl">
                 <div>
@@ -144,9 +142,7 @@
                 </div>
 
                 <div id="sec-archive" class="p-6">
-                    <div id="archive-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Senarai tarikh di sini -->
-                    </div>
+                    <div id="archive-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                 </div>
 
                 <div id="sec-settings" class="hidden p-8">
@@ -156,7 +152,7 @@
                             <input type="text" id="s-title" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none">
                         </div>
                         <div class="md:col-span-2">
-                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">Sub-Tajuk (Peringkat/Zon)</label>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">Sub-Tajuk</label>
                             <input type="text" id="s-year" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none">
                         </div>
                         <div>
@@ -179,7 +175,7 @@
             </div>
         </div>
 
-        <!-- JADUAL TERPERINCI -->
+        <!-- JADUAL KEHADIRAN -->
         <div id="v-details" class="hidden mt-6 space-y-6">
             <div class="no-print flex justify-between items-center">
                 <button onclick="hideDetails()" class="text-indigo-600 font-bold text-xs hover:underline flex items-center gap-2">⬅ KEMBALI</button>
@@ -201,24 +197,17 @@
                                 <th class="p-4 text-right no-print">Tindakan</th>
                             </tr>
                         </thead>
-                        <tbody id="attendance-body" class="text-sm">
-                            <!-- Baris data -->
-                        </tbody>
+                        <tbody id="attendance-body" class="text-sm"></tbody>
                     </table>
                 </div>
-                <div id="empty-msg" class="hidden p-20 text-center text-slate-400 font-bold uppercase tracking-widest text-xs">
-                    Tiada rekod pendaftaran untuk tarikh ini.
-                </div>
+                <div id="empty-msg" class="hidden p-20 text-center text-slate-400 font-bold uppercase tracking-widest text-xs">Tiada rekod pendaftaran.</div>
             </div>
         </div>
-
     </main>
 
-    <footer class="bg-white border-t border-slate-200 py-8 no-print mt-auto">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-[10px] text-slate-400 font-black tracking-[0.4em] uppercase mb-4">&copy; Jabatan Hal Ehwal Agama Islam Pulau Pinang</p>
-            <button onclick="toggleModal('m-login', true)" class="text-[10px] font-bold text-slate-300 hover:text-indigo-600 uppercase tracking-widest transition-all">Portal Pentadbir</button>
-        </div>
+    <footer class="bg-white border-t border-slate-200 py-8 no-print mt-auto text-center">
+        <p class="text-[10px] text-slate-400 font-black tracking-[0.4em] uppercase mb-4">&copy; Jabatan Hal Ehwal Agama Islam Pulau Pinang</p>
+        <button onclick="toggleModal('m-login', true)" class="text-[10px] font-bold text-slate-300 hover:text-indigo-600 uppercase tracking-widest transition-all">Portal Pentadbir</button>
     </footer>
 
     <!-- MODAL: DAFTAR -->
@@ -234,26 +223,26 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="md:col-span-2">
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">Nama Penuh</label>
-                            <input type="text" id="in-name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Masukkan nama penuh">
+                            <input type="text" id="in-name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none" placeholder="Masukkan nama penuh">
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">No. K/P (Tanpa '-')</label>
-                            <input type="text" id="in-ic" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500" placeholder="90010101XXXX">
+                            <input type="text" id="in-ic" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none" placeholder="90010101XXXX">
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">Peranan</label>
-                            <select id="in-role" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500">
+                            <select id="in-role" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
                                 <option value="Peserta">Peserta</option>
                                 <option value="Urus Setia">Urus Setia</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">No. Telefon</label>
-                            <input type="tel" id="in-phone" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500">
+                            <input type="tel" id="in-phone" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">Emel (Pilihan)</label>
-                            <input type="email" id="in-email" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500" placeholder="contoh@gmail.com">
+                            <input type="email" id="in-email" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none" placeholder="contoh@gmail.com">
                         </div>
                     </div>
                     <div>
@@ -281,8 +270,8 @@
             <div class="bg-white w-full max-w-sm rounded-3xl p-8 shadow-2xl border-t-8 border-indigo-900">
                 <h3 class="text-2xl font-black text-slate-800 text-center uppercase mb-8">Admin Access</h3>
                 <div class="space-y-4">
-                    <input type="text" id="adm-user" placeholder="ID Pengguna" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500">
-                    <input type="password" id="adm-pass" placeholder="Katalaluan" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500">
+                    <input type="text" id="adm-user" placeholder="ID Pengguna" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                    <input type="password" id="adm-pass" placeholder="Katalaluan" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
                     <p id="login-error" class="hidden text-xs text-red-500 font-bold text-center">Maaf, maklumat login salah.</p>
                 </div>
                 <div class="mt-8 flex gap-3">
@@ -300,14 +289,22 @@
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
 
         // Konfigurasi Firebase
-        const firebaseConfig = JSON.parse(__firebase_config);
+        const firebaseConfig = {
+            apiKey: "AIzaSyATEzj_wtGA5F-RCqJifevCnD0vTPlwklo",
+            authDomain: "sistem-kehadiran-jheaipp.firebaseapp.com",
+            projectId: "sistem-kehadiran-jheaipp",
+            storageBucket: "sistem-kehadiran-jheaipp.firebasestorage.app",
+            messagingSenderId: "812153074",
+            appId: "1:812153074:web:fe3a792b4afe05a185f86b",
+            measurementId: "G-SXFM0LDSY6"
+        };
+
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         const auth = getAuth(app);
         const db = getFirestore(app);
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'jheaipp-v1';
 
-        // State
         let attendance = [];
         let user = null;
         let settings = {
@@ -319,21 +316,26 @@
         };
         let activeDate = settings.date;
 
-        // Logik Auth
+        // Memperbaiki initAuth untuk menangani kesalahan token kustom dengan fallback yang benar
         const initAuth = async () => {
             try {
+                // Mencoba masuk dengan token kustom jika disediakan oleh lingkungan internal
                 if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
+                    try {
+                        await signInWithCustomToken(auth, __initial_auth_token);
+                    } catch (tokenError) {
+                        // Jika token tidak cocok dengan project Firebase pribadi, masuk secara anonim
+                        await signInAnonymously(auth);
+                    }
                 } else {
                     await signInAnonymously(auth);
                 }
             } catch (error) {
-                console.error("Auth error, falling back to anonymous", error);
+                // Fallback terakhir jika semua gagal
                 await signInAnonymously(auth);
             }
         };
 
-        // Pantau Perubahan Status Auth
         onAuthStateChanged(auth, (u) => {
             user = u;
             if (user) {
@@ -346,45 +348,41 @@
 
         initAuth();
 
-        // Sinkronisasi Data Realtime
         function startRealtimeSync() {
             if (!user) return;
 
+            // Sinkronisasi Pengaturan
             onSnapshot(doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'current'), (snap) => {
                 if (snap.exists()) {
                     settings = snap.data();
                     updateUI();
                 } else {
-                    setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'current'), settings)
-                        .catch(err => console.error("Initialize Settings Error:", err));
+                    setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'current'), settings);
                 }
-            }, (err) => console.error("Settings Sync Permission Error:", err));
+            });
 
+            // Sinkronisasi Kehadiran
             onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'attendance'), (snap) => {
                 attendance = snap.docs.map(d => ({ id: d.id, ...d.data() }));
                 updateDashboard();
                 renderArchive();
                 if (!document.getElementById('v-details').classList.contains('hidden')) renderTable();
-            }, (err) => console.error("Attendance Sync Permission Error:", err));
+            });
         }
 
-        // Kemas Kini UI
         function updateUI() {
             const dateObj = new Date(settings.date);
             const formatted = isNaN(dateObj) ? settings.date : dateObj.toLocaleDateString('ms-MY', { day: '2-digit', month: 'long', year: 'numeric' });
-
             document.getElementById('ui-title').textContent = settings.title;
             document.getElementById('ui-subtitle').textContent = settings.year;
             document.getElementById('ui-date').textContent = formatted;
             document.getElementById('ui-time').textContent = settings.time;
             document.getElementById('ui-venue').textContent = settings.venue;
-
             document.getElementById('s-title').value = settings.title;
             document.getElementById('s-year').value = settings.year;
             document.getElementById('s-date').value = settings.date;
             document.getElementById('s-time').value = settings.time;
             document.getElementById('s-venue').value = settings.venue;
-
             document.getElementById('p-title').textContent = settings.title;
             document.getElementById('p-sub').textContent = settings.year;
             document.getElementById('p-date').textContent = formatted;
@@ -397,237 +395,85 @@
             document.getElementById('live-progress').style.width = `${Math.min((todayCount / 100) * 100, 100)}%`;
         }
 
-        // Logik Kanvas Tandatangan
+        // Pad Tandatangan
         const canvas = document.getElementById('sig-canvas');
         const ctx = canvas.getContext('2d');
         let isDrawing = false;
-
-        function resizeCanvas() {
-            const rect = canvas.parentElement.getBoundingClientRect();
-            canvas.width = rect.width;
-            canvas.height = rect.height;
-        }
-
+        function resizeCanvas() { const rect = canvas.parentElement.getBoundingClientRect(); canvas.width = rect.width; canvas.height = rect.height; }
         window.addEventListener('resize', resizeCanvas);
-
-        function startDrawing(e) {
-            isDrawing = true;
-            const pos = getMousePos(e);
-            ctx.beginPath();
-            ctx.moveTo(pos.x, pos.y);
-            e.preventDefault();
-        }
-
-        function draw(e) {
-            if (!isDrawing) return;
-            const pos = getMousePos(e);
-            ctx.lineWidth = 2.5;
-            ctx.lineCap = 'round';
-            ctx.strokeStyle = '#1e293b';
-            ctx.lineTo(pos.x, pos.y);
-            ctx.stroke();
-            e.preventDefault();
-        }
-
-        function stopDrawing() { isDrawing = false; }
-
-        function getMousePos(e) {
-            const rect = canvas.getBoundingClientRect();
-            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-            return { x: clientX - rect.left, y: clientY - rect.top };
-        }
-
-        canvas.addEventListener('mousedown', startDrawing);
-        canvas.addEventListener('touchstart', startDrawing);
-        canvas.addEventListener('mousemove', draw);
-        canvas.addEventListener('touchmove', draw);
-        window.addEventListener('mouseup', stopDrawing);
-        window.addEventListener('touchend', stopDrawing);
-
+        const getMousePos = (e) => { const rect = canvas.getBoundingClientRect(); const clientX = e.touches ? e.touches[0].clientX : e.clientX; const clientY = e.touches ? e.touches[0].clientY : e.clientY; return { x: clientX - rect.left, y: clientY - rect.top }; };
+        const startDrawing = (e) => { isDrawing = true; const pos = getMousePos(e); ctx.beginPath(); ctx.moveTo(pos.x, pos.y); e.preventDefault(); };
+        const draw = (e) => { if (!isDrawing) return; const pos = getMousePos(e); ctx.lineWidth = 2.5; ctx.lineCap = 'round'; ctx.strokeStyle = '#1e293b'; ctx.lineTo(pos.x, pos.y); ctx.stroke(); e.preventDefault(); };
+        const stopDrawing = () => { isDrawing = false; };
+        canvas.addEventListener('mousedown', startDrawing); canvas.addEventListener('touchstart', startDrawing); canvas.addEventListener('mousemove', draw); canvas.addEventListener('touchmove', draw); window.addEventListener('mouseup', stopDrawing); window.addEventListener('touchend', stopDrawing);
         window.clearCanvas = () => ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Hantar Borang
+        // Borang Kehadiran
         document.getElementById('f-attend').onsubmit = async (e) => {
             e.preventDefault();
-            if (!user) { alert("Menunggu pengesahan sistem..."); return; }
-            
+            if (!user) { alert("Sila tunggu sistem diaktifkan..."); return; }
             const loader = document.getElementById('loader');
             const btn = document.getElementById('submit-btn');
-
-            const blank = document.createElement('canvas');
-            blank.width = canvas.width; blank.height = canvas.height;
-            if (canvas.toDataURL() === blank.toDataURL()) {
-                alert("Sila berikan tandatangan!");
-                return;
-            }
-
-            btn.disabled = true;
-            loader.classList.remove('hidden');
-
+            if (canvas.toDataURL() === document.createElement('canvas').toDataURL()) { alert("Sila tandatangan!"); return; }
+            btn.disabled = true; loader.classList.remove('hidden');
             try {
                 const payload = {
                     name: document.getElementById('in-name').value,
                     ic: document.getElementById('in-ic').value,
                     role: document.getElementById('in-role').value,
                     phone: document.getElementById('in-phone').value,
-                    email: document.getElementById('in-email').value || "-", // Simpan sebagai dash jika kosong
+                    email: document.getElementById('in-email').value || "-",
                     signature: canvas.toDataURL(),
                     regDate: settings.date,
                     createdAt: serverTimestamp()
                 };
                 await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'attendance'), payload);
-                e.target.reset();
-                clearCanvas();
-                toggleModal('m-reg', false);
-                alert("Pendaftaran berjaya direkodkan.");
-            } catch (err) {
-                console.error("Submit Error:", err);
-                alert("Gagal merekod kehadiran. Sila pastikan sistem diaktifkan.");
-            } finally {
-                btn.disabled = false;
-                loader.classList.add('hidden');
-            }
+                e.target.reset(); clearCanvas(); toggleModal('m-reg', false); alert("Pendaftaran Berjaya!");
+            } catch (err) { alert("Gagal menyimpan data!"); } finally { btn.disabled = false; loader.classList.add('hidden'); }
         };
 
+        // Tetapan Admin
         document.getElementById('f-settings').onsubmit = async (e) => {
             e.preventDefault();
-            if (!user) return;
-            const newSettings = {
-                title: document.getElementById('s-title').value,
-                year: document.getElementById('s-year').value,
-                date: document.getElementById('s-date').value,
-                time: document.getElementById('s-time').value,
-                venue: document.getElementById('s-venue').value
-            };
-            try {
-                await setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'current'), newSettings);
-                alert("Tetapan program telah dikemaskini.");
-            } catch (err) {
-                console.error("Settings Update Error:", err);
-                alert("Gagal mengemaskini tetapan.");
-            }
+            const newSettings = { title: document.getElementById('s-title').value, year: document.getElementById('s-year').value, date: document.getElementById('s-date').value, time: document.getElementById('s-time').value, venue: document.getElementById('s-venue').value };
+            await setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'current'), newSettings);
+            alert("Tetapan telah dikemaskini.");
         };
 
-        // Kawalan Akses Admin
-        window.attemptLogin = () => {
-            const u = document.getElementById('adm-user').value;
-            const p = document.getElementById('adm-pass').value;
-            if (u === "admin" && p === "admin12345") {
-                toggleModal('m-login', false);
-                document.getElementById('v-dashboard').classList.add('hidden');
-                document.getElementById('v-admin').classList.remove('hidden');
-            } else {
-                document.getElementById('login-error').classList.remove('hidden');
-            }
-        };
+        window.attemptLogin = () => { if (document.getElementById('adm-user').value === "admin" && document.getElementById('adm-pass').value === "admin12345") { toggleModal('m-login', false); document.getElementById('v-dashboard').classList.add('hidden'); document.getElementById('v-admin').classList.remove('hidden'); } else { document.getElementById('login-error').classList.remove('hidden'); } };
+        window.logout = () => { document.getElementById('v-admin').classList.add('hidden'); document.getElementById('v-details').classList.add('hidden'); document.getElementById('v-dashboard').classList.remove('hidden'); };
+        window.toggleModal = (id, show) => { document.getElementById(id).classList.toggle('hidden', !show); if (id === 'm-reg' && show) setTimeout(resizeCanvas, 100); };
+        window.switchTab = (tab) => { document.getElementById('t-archive').className = `flex-1 py-4 text-xs font-bold uppercase tracking-widest ${tab==='archive'?'tab-active':'text-slate-400'}`; document.getElementById('t-settings').className = `flex-1 py-4 text-xs font-bold uppercase tracking-widest ${tab==='settings'?'tab-active':'text-slate-400'}`; document.getElementById('sec-archive').classList.toggle('hidden', tab !== 'archive'); document.getElementById('sec-settings').classList.toggle('hidden', tab !== 'settings'); };
 
-        window.logout = () => {
-            document.getElementById('v-admin').classList.add('hidden');
-            document.getElementById('v-details').classList.add('hidden');
-            document.getElementById('v-dashboard').classList.remove('hidden');
-        };
-
-        window.toggleModal = (id, show) => {
-            document.getElementById(id).classList.toggle('hidden', !show);
-            if (id === 'm-reg' && show) setTimeout(resizeCanvas, 100);
-        };
-
-        window.switchTab = (tab) => {
-            document.getElementById('t-archive').className = `flex-1 py-4 text-xs font-bold uppercase tracking-widest ${tab==='archive'?'tab-active':'text-slate-400'}`;
-            document.getElementById('t-settings').className = `flex-1 py-4 text-xs font-bold uppercase tracking-widest ${tab==='settings'?'tab-active':'text-slate-400'}`;
-            document.getElementById('sec-archive').classList.toggle('hidden', tab !== 'archive');
-            document.getElementById('sec-settings').classList.toggle('hidden', tab !== 'settings');
-        };
-
+        // Arkib
         function renderArchive() {
-            const container = document.getElementById('archive-list');
-            container.innerHTML = '';
+            const container = document.getElementById('archive-list'); container.innerHTML = '';
             const dates = [...new Set(attendance.map(a => a.regDate))].sort((a,b) => b.localeCompare(a));
-            
             if (!dates.includes(settings.date)) dates.unshift(settings.date);
-
             dates.forEach(dateStr => {
                 const count = attendance.filter(a => a.regDate === dateStr).length;
-                const d = new Date(dateStr);
-                const display = isNaN(d) ? dateStr : d.toLocaleDateString('ms-MY', { day: '2-digit', month: 'short', year: 'numeric' });
-                
+                const display = new Date(dateStr).toLocaleDateString('ms-MY', { day: '2-digit', month: 'short', year: 'numeric' });
                 const card = document.createElement('div');
-                card.className = `p-5 rounded-2xl border-2 cursor-pointer transition-all flex items-center justify-between group ${dateStr === settings.date ? 'border-indigo-600 bg-indigo-50' : 'border-slate-100 hover:border-indigo-200 bg-white'}`;
+                card.className = `p-5 rounded-2xl border-2 cursor-pointer transition-all flex items-center justify-between ${dateStr === settings.date ? 'border-indigo-600 bg-indigo-50' : 'bg-white'}`;
                 card.onclick = () => showDetails(dateStr, display);
-                card.innerHTML = `
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-lg shadow-sm">${dateStr === settings.date ? '📅' : '📁'}</div>
-                        <div>
-                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">${display}</p>
-                            <h4 class="font-bold text-slate-800 uppercase text-xs">${dateStr === settings.date ? 'Program Semasa' : 'Arkib Kehadiran'}</h4>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-xs font-black text-indigo-600">${count} Hadir</p>
-                        <span class="text-indigo-200 group-hover:translate-x-1 transition-transform inline-block">➜</span>
-                    </div>
-                `;
+                card.innerHTML = `<div class="flex items-center gap-4"><div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center">${dateStr === settings.date ? '📅' : '📁'}</div><div><p class="text-[10px] font-black text-slate-400 uppercase">${display}</p><h4 class="font-bold text-slate-800 text-xs">${dateStr === settings.date ? 'Program Semasa' : 'Arkib Rekod'}</h4></div></div><div class="text-right"><p class="text-xs font-black text-indigo-600">${count} Hadir</p></div>`;
                 container.appendChild(card);
             });
         }
 
-        window.showDetails = (dateStr, display) => {
-            activeDate = dateStr;
-            document.getElementById('v-admin').classList.add('hidden');
-            document.getElementById('v-details').classList.remove('hidden');
-            document.getElementById('table-header').textContent = `Rekod Kehadiran - ${display}`;
-            renderTable();
-        };
-
-        window.hideDetails = () => {
-            document.getElementById('v-details').classList.add('hidden');
-            document.getElementById('v-admin').classList.remove('hidden');
-        };
-
+        window.showDetails = (dateStr, display) => { activeDate = dateStr; document.getElementById('v-admin').classList.add('hidden'); document.getElementById('v-details').classList.remove('hidden'); document.getElementById('table-header').textContent = `Rekod Kehadiran - ${display}`; renderTable(); };
+        window.hideDetails = () => { document.getElementById('v-details').classList.add('hidden'); document.getElementById('v-admin').classList.remove('hidden'); };
         function renderTable() {
-            const tbody = document.getElementById('attendance-body');
-            const empty = document.getElementById('empty-msg');
-            tbody.innerHTML = '';
-
-            const filtered = attendance.filter(a => a.regDate === activeDate)
-                .sort((a,b) => (a.createdAt?.seconds || 0) - (b.createdAt?.seconds || 0));
-
-            empty.classList.toggle('hidden', filtered.length > 0);
-
+            const tbody = document.getElementById('attendance-body'); tbody.innerHTML = '';
+            const filtered = attendance.filter(a => a.regDate === activeDate).sort((a,b) => (a.createdAt?.seconds || 0) - (b.createdAt?.seconds || 0));
+            document.getElementById('empty-msg').classList.toggle('hidden', filtered.length > 0);
             filtered.forEach((item, idx) => {
-                const tr = document.createElement('tr');
-                tr.className = "border-b border-slate-50 hover:bg-slate-50/50 transition-all";
-                tr.innerHTML = `
-                    <td class="p-4 text-center text-xs font-bold text-slate-300">${idx + 1}</td>
-                    <td class="p-4 font-bold text-slate-800 uppercase text-xs">${item.name}</td>
-                    <td class="p-4 text-xs font-mono text-indigo-500">${item.ic}</td>
-                    <td class="p-4">
-                        <span class="px-2 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-bold rounded-md uppercase">${item.role}</span>
-                    </td>
-                    <td class="p-4 text-center">
-                        <img src="${item.signature}" class="h-8 mx-auto mix-blend-multiply transition-transform hover:scale-[3] bg-white border border-slate-100 rounded">
-                    </td>
-                    <td class="p-4 text-right no-print">
-                        <button onclick="deleteEntry('${item.id}')" class="text-slate-300 hover:text-red-500 transition-colors">🗑</button>
-                    </td>
-                `;
+                const tr = document.createElement('tr'); tr.className = "border-b border-slate-50 hover:bg-slate-50";
+                tr.innerHTML = `<td class="p-4 text-center text-xs font-bold text-slate-300">${idx + 1}</td><td class="p-4 font-bold text-slate-800 uppercase text-xs">${item.name}</td><td class="p-4 text-xs font-mono">${item.ic}</td><td class="p-4"><span class="px-2 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-bold rounded uppercase">${item.role}</span></td><td class="p-4 text-center"><img src="${item.signature}" class="h-8 mx-auto mix-blend-multiply"></td><td class="p-4 text-right no-print"><button onclick="deleteEntry('${item.id}')" class="text-slate-300 hover:text-red-500">🗑</button></td>`;
                 tbody.appendChild(tr);
             });
         }
-
-        window.deleteEntry = async (id) => {
-            if (!user) return;
-            if (confirm("Adakah anda pasti mahu memadam rekod ini?")) {
-                try {
-                    await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'attendance', id));
-                } catch (err) {
-                    console.error("Delete Error:", err);
-                    alert("Gagal memadam rekod.");
-                }
-            }
-        };
-
+        window.deleteEntry = async (id) => { if (confirm("Adakah anda pasti mahu memadam rekod ini?")) await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'attendance', id)); };
     </script>
 </body>
 </html>

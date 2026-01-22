@@ -192,6 +192,7 @@
                                 <th class="p-4 text-center">Bil</th>
                                 <th class="p-4">Nama Penuh</th>
                                 <th class="p-4">No. K/P</th>
+                                <th class="p-4">Kariah</th>
                                 <th class="p-4">Peranan</th>
                                 <th class="p-4 text-center">Tandatangan</th>
                                 <th class="p-4 text-right no-print">Tindakan</th>
@@ -235,6 +236,66 @@
                                 <option value="Peserta">Peserta</option>
                                 <option value="Urus Setia">Urus Setia</option>
                             </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">Kariah (Masjid)</label>
+                            <select id="in-kariah" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none" onchange="handleKariahChange(this.value)">
+                                <option value="" disabled selected>Pilih Masjid</option>
+                                <option value="Masjid Alma jaya">Masjid Alma jaya</option>
+                                <option value="Masjid Bagan Nyior Juru">Masjid Bagan Nyior Juru</option>
+                                <option value="Masjid Balik Bukit">Masjid Balik Bukit</option>
+                                <option value="Masjid Batu, Kg Pertama">Masjid Batu, Kg Pertama</option>
+                                <option value="Masjid Bukit Indera Muda">Masjid Bukit Indera Muda</option>
+                                <option value="Masjid Bukit Teh">Masjid Bukit Teh</option>
+                                <option value="Masjid Cherok Tok’kun Bawah">Masjid Cherok Tok’kun Bawah</option>
+                                <option value="Masjid Guar Perahu">Masjid Guar Perahu</option>
+                                <option value="Masjid Haji Md Desa">Masjid Haji Md Desa</option>
+                                <option value="Masjid Haji Saad Tanah Liat">Masjid Haji Saad Tanah Liat</option>
+                                <option value="Masjid Jalan Baharu Perai">Masjid Jalan Baharu Perai</option>
+                                <option value="Masjid Kg Pelet">Masjid Kg Pelet</option>
+                                <option value="Masjid Kg Sekolah Juru">Masjid Kg Sekolah Juru</option>
+                                <option value="Masjid Kg Setol">Masjid Kg Setol</option>
+                                <option value="Masjid Kebun Sireh">Masjid Kebun Sireh</option>
+                                <option value="Masjid Kg Alma">Masjid Kg Alma</option>
+                                <option value="Masjid Kg Baru Alma">Masjid Kg Baru Alma</option>
+                                <option value="Masjid Kuala Juru">Masjid Kuala Juru</option>
+                                <option value="Masjid Kuala Mengkuang">Masjid Kuala Mengkuang</option>
+                                <option value="Masjid Kuala Tasek">Masjid Kuala Tasek</option>
+                                <option value="Masjid Kubang Semang">Masjid Kubang Semang</option>
+                                <option value="Masjid Kubang Ulu">Masjid Kubang Ulu</option>
+                                <option value="Masjid Machang Bubuk">Masjid Machang Bubuk</option>
+                                <option value="Masjid Mengkuang Semarak">Masjid Mengkuang Semarak</option>
+                                <option value="Masjid Mengkuang Titi">Masjid Mengkuang Titi</option>
+                                <option value="Masjid Padang Ibu">Masjid Padang Ibu</option>
+                                <option value="Masjid Padang Lalang">Masjid Padang Lalang</option>
+                                <option value="Masjid Papan, Kg Pertama">Masjid Papan, Kg Pertama</option>
+                                <option value="Masjid Pengkalan Tambang">Masjid Pengkalan Tambang</option>
+                                <option value="Masjid Perai">Masjid Perai</option>
+                                <option value="Masjid Permatang Batu">Masjid Permatang Batu</option>
+                                <option value="Masjid Permatang Janggus">Masjid Permatang Janggus</option>
+                                <option value="Masjid Permatang Nibong">Masjid Permatang Nibong</option>
+                                <option value="Masjid Permatang Pasir">Masjid Permatang Pasir</option>
+                                <option value="Masjid Permatang Pauh">Masjid Permatang Pauh</option>
+                                <option value="Masjid Permatang Tinggi">Masjid Permatang Tinggi</option>
+                                <option value="Masjid Sama Gagah">Masjid Sama Gagah</option>
+                                <option value="Masjid Seberang Jaya">Masjid Seberang Jaya</option>
+                                <option value="Masjid Sembilang">Masjid Sembilang</option>
+                                <option value="Masjid Sungai Rambai">Masjid Sungai Rambai</option>
+                                <option value="Masjid Taman Guar Perahu">Masjid Taman Guar Perahu</option>
+                                <option value="Masjid Taman Pelangi">Masjid Taman Pelangi</option>
+                                <option value="Masjid Tasek Junjong">Masjid Tasek Junjong</option>
+                                <option value="Masjid Tengah Berapit">Masjid Tengah Berapit</option>
+                                <option value="Masjid Timah">Masjid Timah</option>
+                                <option value="Masjid Tok Lebai Hashim">Masjid Tok Lebai Hashim</option>
+                                <option value="Masjid Tokun Atas">Masjid Tokun Atas</option>
+                                <option value="Masjid Tuan Abdullah">Masjid Tuan Abdullah</option>
+                                <option value="Masjid Daerah Seberang Perai Tengah">Masjid Daerah Seberang Perai Tengah</option>
+                                <option value="Lain-lain">Lain-lain</option>
+                            </select>
+                        </div>
+                        <div id="custom-kariah-wrapper" class="md:col-span-2 hidden animate-pulse">
+                            <label class="block text-[10px] font-bold text-indigo-600 uppercase mb-1 ml-1">Sila Nyatakan Nama Masjid</label>
+                            <input type="text" id="in-custom-kariah" class="w-full px-4 py-3 bg-indigo-50 border border-indigo-200 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Masukkan nama masjid anda">
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">No. Telefon</label>
@@ -316,22 +377,19 @@
         };
         let activeDate = settings.date;
 
-        // Memperbaiki initAuth untuk menangani kesalahan token kustom dengan fallback yang benar
+        // Memperbaiki initAuth
         const initAuth = async () => {
             try {
-                // Mencoba masuk dengan token kustom jika disediakan oleh lingkungan internal
                 if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
                     try {
                         await signInWithCustomToken(auth, __initial_auth_token);
                     } catch (tokenError) {
-                        // Jika token tidak cocok dengan project Firebase pribadi, masuk secara anonim
                         await signInAnonymously(auth);
                     }
                 } else {
                     await signInAnonymously(auth);
                 }
             } catch (error) {
-                // Fallback terakhir jika semua gagal
                 await signInAnonymously(auth);
             }
         };
@@ -351,7 +409,6 @@
         function startRealtimeSync() {
             if (!user) return;
 
-            // Sinkronisasi Pengaturan
             onSnapshot(doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'current'), (snap) => {
                 if (snap.exists()) {
                     settings = snap.data();
@@ -361,7 +418,6 @@
                 }
             });
 
-            // Sinkronisasi Kehadiran
             onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'attendance'), (snap) => {
                 attendance = snap.docs.map(d => ({ id: d.id, ...d.data() }));
                 updateDashboard();
@@ -395,7 +451,20 @@
             document.getElementById('live-progress').style.width = `${Math.min((todayCount / 100) * 100, 100)}%`;
         }
 
-        // Pad Tandatangan
+        // Handle Kariah Dropdown
+        window.handleKariahChange = (val) => {
+            const wrapper = document.getElementById('custom-kariah-wrapper');
+            const input = document.getElementById('in-custom-kariah');
+            if (val === "Lain-lain") {
+                wrapper.classList.remove('hidden');
+                input.required = true;
+            } else {
+                wrapper.classList.add('hidden');
+                input.required = false;
+                input.value = "";
+            }
+        };
+
         const canvas = document.getElementById('sig-canvas');
         const ctx = canvas.getContext('2d');
         let isDrawing = false;
@@ -415,11 +484,18 @@
             const loader = document.getElementById('loader');
             const btn = document.getElementById('submit-btn');
             if (canvas.toDataURL() === document.createElement('canvas').toDataURL()) { alert("Sila tandatangan!"); return; }
+            
+            // Logik Ambil Nilai Kariah
+            const kariahDropdown = document.getElementById('in-kariah').value;
+            const customKariah = document.getElementById('in-custom-kariah').value;
+            const finalKariah = kariahDropdown === "Lain-lain" ? customKariah : kariahDropdown;
+
             btn.disabled = true; loader.classList.remove('hidden');
             try {
                 const payload = {
                     name: document.getElementById('in-name').value,
                     ic: document.getElementById('in-ic').value,
+                    kariah: finalKariah,
                     role: document.getElementById('in-role').value,
                     phone: document.getElementById('in-phone').value,
                     email: document.getElementById('in-email').value || "-",
@@ -428,7 +504,11 @@
                     createdAt: serverTimestamp()
                 };
                 await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'attendance'), payload);
-                e.target.reset(); clearCanvas(); toggleModal('m-reg', false); alert("Pendaftaran Berjaya!");
+                e.target.reset(); 
+                document.getElementById('custom-kariah-wrapper').classList.add('hidden');
+                clearCanvas(); 
+                toggleModal('m-reg', false); 
+                alert("Pendaftaran Berjaya!");
             } catch (err) { alert("Gagal menyimpan data!"); } finally { btn.disabled = false; loader.classList.add('hidden'); }
         };
 
@@ -469,7 +549,7 @@
             document.getElementById('empty-msg').classList.toggle('hidden', filtered.length > 0);
             filtered.forEach((item, idx) => {
                 const tr = document.createElement('tr'); tr.className = "border-b border-slate-50 hover:bg-slate-50";
-                tr.innerHTML = `<td class="p-4 text-center text-xs font-bold text-slate-300">${idx + 1}</td><td class="p-4 font-bold text-slate-800 uppercase text-xs">${item.name}</td><td class="p-4 text-xs font-mono">${item.ic}</td><td class="p-4"><span class="px-2 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-bold rounded uppercase">${item.role}</span></td><td class="p-4 text-center"><img src="${item.signature}" class="h-8 mx-auto mix-blend-multiply"></td><td class="p-4 text-right no-print"><button onclick="deleteEntry('${item.id}')" class="text-slate-300 hover:text-red-500">🗑</button></td>`;
+                tr.innerHTML = `<td class="p-4 text-center text-xs font-bold text-slate-300">${idx + 1}</td><td class="p-4 font-bold text-slate-800 uppercase text-xs">${item.name}</td><td class="p-4 text-xs font-mono">${item.ic}</td><td class="p-4 text-xs text-slate-600">${item.kariah || '-'}</td><td class="p-4"><span class="px-2 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-bold rounded uppercase">${item.role}</span></td><td class="p-4 text-center"><img src="${item.signature}" class="h-8 mx-auto mix-blend-multiply"></td><td class="p-4 text-right no-print"><button onclick="deleteEntry('${item.id}')" class="text-slate-300 hover:text-red-500">🗑</button></td>`;
                 tbody.appendChild(tr);
             });
         }
